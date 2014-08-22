@@ -1,5 +1,25 @@
-Skeleton theme
-============
+# Shopify Starter Theme
+
+
+
+## Install shopify_theme Gem
+
+
+*The Shopify theme gem is a command line tool that lets you make live changes to themes on your Shopify store. ~~If the command line is scary, check out the Desktop Theme Editor app.~~*
+
+install gem: `gem install shopify_theme`
+
+generate config.yml file (replace values): `theme configure api_key password store_url`
+
+<https://github.com/Shopify/shopify_theme>
+
+Or run `theme` to print them out.
+
+
+
+
+##Skeleton theme
+
 
 The Skeleton theme is a simplified Shopify theme, to be used as a "blank slate" starting point for theme designers.
 
