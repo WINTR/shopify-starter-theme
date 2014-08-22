@@ -11,6 +11,8 @@ install gem: `gem install shopify_theme`
 
 generate config.yml file (replace values): `theme configure api_key password store_url`
 
+
+
 <https://github.com/Shopify/shopify_theme>
 
 Or run `theme` to print them out.
