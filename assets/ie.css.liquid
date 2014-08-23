@@ -188,11 +188,13 @@ em {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
-  color: transparent;
-  background-color: transparent;
+}
+.hidden {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  color: transparent;
+  background-color: transparent;
 }
 .relative,
 .vertical-center {
@@ -208,7 +210,8 @@ em {
   display: inline-block;
 }
 .display-block,
-.horizontal-center {
+.horizontal-center,
+.logo {
   display: block;
 }
 .center {
@@ -287,17 +290,21 @@ em {
   display: block;
   display: none;
 }
+.container {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+}
 .logo {
   position: relative;
   width: 80%;
-  background-image: url("http://staging.chihulygardenandglass.com/static/img/svg/logo.svg");
+  background-image: url("http://staging.chihulygardenandglass.com/static/img/svg/logo-mobile.svg");
   background-repeat: no-repeat;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin: 20px;
+  margin-left: 0;
   width: 150px;
   height: 50px;
-  margin-top: 10px;
-  background-image: url("http://staging.chihulygardenandglass.com/static/img/svg/logo-mobile.svg");
-  position: absolute;
-  left: 0;
+  background-image: url("http://staging.chihulygardenandglass.com/static/img/svg/logo.svg");
 }

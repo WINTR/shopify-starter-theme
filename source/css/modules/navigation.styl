@@ -1,14 +1,15 @@
 .logo
+  @extends .display-block
+  @extends .image-replace
   position relative
   width 80%
-  @extends .image-replace
-  background-image url('http://staging.chihulygardenandglass.com/static/img/svg/logo.svg')
+  background-image url('http://staging.chihulygardenandglass.com/static/img/svg/logo-mobile.svg')
   background-repeat no-repeat
   background-size contain
+  margin global-margin
+  margin-left 0
 
   +above(tablet)
     width 150px
     height 50px
-    background-image url('http://staging.chihulygardenandglass.com/static/img/svg/logo-mobile.svg')
-    position absolute
-    left 0
+    background-image url('http://staging.chihulygardenandglass.com/static/img/svg/logo.svg')
