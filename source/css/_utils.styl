@@ -1,0 +1,149 @@
+/* /////////////////////////////////////////////////////
+
+UTILS
+General CSS utilities and mixins
+
+///////////////////////////////////////////////////// */
+
+
+gpu()
+  -webkit-transform translate3d(0, 0, 0)
+
+hide-text()
+  border 0
+  font 0/0 a
+  text-shadow none
+  color transparent
+  background-color transparent
+
+.no-flicker
+  -webkit-transform translate3d(0, 0, 0)
+ 
+.hide-text
+  border 0
+  font 0/0 a
+  text-shadow none
+  
+
+.hidden
+  @extends .hide-text
+  margin 0
+  padding 0
+  overflow hidden
+  color transparent
+  background-color transparent
+
+.relative
+  position relative
+
+.absolute
+  position absolute
+
+.upcase
+  text-transform uppercase
+
+.inline-block
+  display inline-block
+
+.display-block
+  display block
+
+.center
+  text-align center
+  p
+    margin-left auto
+    margin-right auto
+  
+.overflow-hidden
+  overflow hidden
+
+.button-reset
+  border 0
+  padding 0
+  cursor pointer
+  overflow visible // removes padding in IE
+  background none
+  &::-moz-focus-inner
+    // removes padding in Firefox
+    border none
+    padding 0
+
+.no-decoration
+  text-decoration none
+
+.anchor-link-style
+  text-decoration none
+  background-image linear-gradient(#fff 95%, orange 50%)
+  background-repeat repeat-x
+  &:hover 
+    outline 0 
+    background-image linear-gradient(#fff 93%, orange 55%)
+
+  &:active 
+    outline 0  
+
+.flex-row
+  display flex
+  align-items center
+  justify-content center
+
+.image-replace
+  font 0/0 a
+  text-shadow none
+  color transparent
+
+.horizontal-center
+  @extends .display-block
+  margin-left auto
+  margin-right auto
+
+.vertical-center
+  @extends .relative
+  top 50%
+  translateY -50%
+
+
+/* Responsive Mixins
+   see: http://jakearchibald.github.com/sass-ie
+------------------------------------------------ */
+
+// To create min-width media queries
+above(width)
+  if fix-mqs
+    if fix-mqs >= width
+      {block}
+  else
+    @media screen and (min-width: width)
+      {block}
+
+
+// To create max-width media queries
+below(width)
+  if fix-mqs
+    if fix-mqs <= width
+      {block}
+  else
+    @media screen and (max-width: width)
+      {block}
+
+
+// For only old IE
+old-ie()
+  if $old-ie
+    {block}
+
+
+// Hide on mobile
+.no-mobile
+  display: none
+  
+  +above(tablet)
+    display block
+
+
+// Only on mobile
+.mobile-only
+  display: block
+  
+  +above(tablet)
+    display none

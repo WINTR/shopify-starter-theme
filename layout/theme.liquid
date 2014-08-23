@@ -25,7 +25,7 @@
 
   {{ content_for_header }}
 
-  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'style.css' | asset_url | stylesheet_tag }}
   {{ 'social/social-icons.css' | global_asset_url | stylesheet_tag }}
   {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' | stylesheet_tag }}
   
@@ -55,7 +55,7 @@
   <div class="container">
 
     <header class="row">
-      
+    
       <div class="social-links half column left-aligned">
       {% include 'social-links' %}
       </div>      
@@ -103,7 +103,7 @@
           {{ 'logo.png' | asset_url | img_tag: shop.name }}
         </a>
         {% else %}
-        <a id="site-title" href="/">
+        <a id="site-title" class="logo" href="/">
           {{ shop.name }}
         </a>
         {% endif %}
