@@ -1,8 +1,5 @@
 # Shopify Starter Theme
-
-
-=======
-=======================
+================================================================
 
 ## Install shopify_theme Gem
 
@@ -84,9 +81,6 @@ A Few Notes on Folder Structure
 <br/>
 
 =======================
->>>>>>> dev
-
-
 
 ##Skeleton theme
 
